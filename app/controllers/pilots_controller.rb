@@ -1,4 +1,5 @@
 class PilotsController < ApplicationController
+before_filter :autenticacao, :except => [:index, :show]
   # GET /pilots
   # GET /pilots.json
   def index

@@ -1,4 +1,4 @@
-<h1>Listing pilots</h1>
+<h1>Lista de Pilotos</h1>
 
 <table>
   <tr>
@@ -15,13 +15,14 @@
     <td><%= pilot.nome %></td>
     <td><%= pilot.endereco %></td>
     <td><%= pilot.telefone %></td>
-    <td><%= link_to 'Show', pilot %></td>
-    <td><%= link_to 'Edit', edit_pilot_path(pilot) %></td>
-    <td><%= link_to 'Destroy', pilot, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+    <td><%= link_to '[Mostrar Detalhes]', pilot %></td>
+    <td><%= link_to '[Editar]', edit_pilot_path(pilot) %></td>
+    <td><%= link_to '[Apagar]', pilot, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Pilot', new_pilot_path %>
+<%= link_to '[Novo Piloto]', new_pilot_path %>
+<a href="index">[Página Inicial]</a>

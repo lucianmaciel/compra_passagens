@@ -1,4 +1,6 @@
 class PassesController < ApplicationController
+  before_filter :autenticacao
+  
   # GET /passes
   # GET /passes.json
   def index

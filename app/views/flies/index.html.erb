@@ -1,15 +1,14 @@
-<h1>Listing flies</h1>
+<h1>Lista de Vôos</h1>
 
 <table>
   <tr>
     <th>Codigo</th>
     <th>Data</th>
-    <th>Hora voo</th>
-    <th>Hora chegada</th>
     <th>Origem</th>
     <th>Destino</th>
-    <th>Pilot</th>
-    <th>Airplane</th>
+    <th>Piloto</th>
+    <th>Modelo Avião</th>
+    <th>Capacidade</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,19 +18,19 @@
   <tr>
     <td><%= fly.codigo %></td>
     <td><%= fly.data %></td>
-    <td><%= fly.hora_voo %></td>
-    <td><%= fly.hora_chegada %></td>
     <td><%= fly.origem %></td>
     <td><%= fly.destino %></td>
     <td><%= fly.pilot.nome %></td>
     <td><%= fly.airplane.modelo %></td>
-    <td><%= link_to 'Show', fly %></td>
-    <td><%= link_to 'Edit', edit_fly_path(fly) %></td>
-    <td><%= link_to 'Destroy', fly, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+    <td><%= fly.airplane.capacidade %></td>
+    <td><%= link_to '[Mostrar Detalhes]', fly %></td>
+    <td><%= link_to '[Editar]', edit_fly_path(fly) %></td>
+    <td><%= link_to '[Apagar]', fly, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Fly', new_fly_path %>
+<%= link_to '[Novo Vôo]', new_fly_path %>
+<a href="index">[Página Inicial]</a>

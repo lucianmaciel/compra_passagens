@@ -11,12 +11,12 @@
 </p>
 
 <p>
-  <b>Hora voo:</b>
+  <b>Horário do voo:</b>
   <%= @fly.hora_voo %>
 </p>
 
 <p>
-  <b>Hora chegada:</b>
+  <b>Horário da chegada:</b>
   <%= @fly.hora_chegada %>
 </p>
 
@@ -31,6 +31,6 @@
 </p>
 
 
-<%= link_to 'Passes', fly_passes_path(@fly) %> |
-<%= link_to 'Edit', edit_fly_path(@fly) %> |
-<%= link_to 'Back', flies_path %>
+<%= link_to '[Passagens]', fly_passes_path(@fly) %> |
+<%= link_to '[Editar]', edit_fly_path(@fly) %> |
+<%= link_to '[Voltar]', flies_path %>

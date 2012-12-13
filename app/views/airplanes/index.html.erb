@@ -1,4 +1,4 @@
-<h1>Listing airplanes</h1>
+<h1>Lista de Aviões</h1>
 
 <table>
   <tr>
@@ -13,13 +13,14 @@
   <tr>
     <td><%= airplane.modelo %></td>
     <td><%= airplane.capacidade %></td>
-    <td><%= link_to 'Show', airplane %></td>
-    <td><%= link_to 'Edit', edit_airplane_path(airplane) %></td>
-    <td><%= link_to 'Destroy', airplane, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+    <td><%= link_to '[Mostrar Detalhes]', airplane %></td>
+    <td><%= link_to '[Editar]', edit_airplane_path(airplane) %></td>
+    <td><%= link_to '[Apagar]', airplane, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Airplane', new_airplane_path %>
+<%= link_to '[Novo Avião]', new_airplane_path %>
+<a href="index">[Página Inicial]</a>

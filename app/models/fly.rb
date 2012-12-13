@@ -10,5 +10,6 @@ class Fly < ActiveRecord::Base
 
   validates_presence_of :airplane
   validates_presence_of :pilot
+  validates :codigo, :uniqueness => true
 
 end

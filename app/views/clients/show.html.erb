@@ -6,12 +6,12 @@
 </p>
 
 <p>
-  <b>Rg:</b>
+  <b>Registro Geral:</b>
   <%= @client.rg %>
 </p>
 
 <p>
-  <b>Endereco:</b>
+  <b>Endereço:</b>
   <%= @client.endereco %>
 </p>
 
@@ -30,6 +30,6 @@
   <%= @client.email %>
 </p>
 
-<%= link_to 'Passes', client_passes_path(@client) %> |
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to '[Passagens do Cliente]', client_passes_path(@client) %> |
+<%= link_to '[Editar]', edit_client_path(@client) %> |
+<%= link_to '[Voltar]', clients_path %>

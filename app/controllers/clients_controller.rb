@@ -1,6 +1,8 @@
 class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
+  before_filter :autenticacao, :except => [:index, :show]
+  
   def index
     @clients = Client.all
 

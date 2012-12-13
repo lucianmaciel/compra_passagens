@@ -1,12 +1,13 @@
-<h1>Listing passes</h1>
+<h1>Lista de Passagens</h1>
 
 <table>
   <tr>
     <th>Assento</th>
-    <th>Valor</th>
+    <th>Valor da Passagem</th>
+    <th>Id do Voo</th>
     <th>Origem</th>
     <th>Destino</th>
-    <th>Client</th>
+    <th>Cliente</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,17 +16,19 @@
 <% @passes.each do |pass| %>
   <tr>
     <td><%= pass.assento %></td>
-    <td><%= pass.valor %></td>
+    <td>R$<%= pass.valor %></td>
+    <td><%= pass.fly.codigo %></td>
     <td><%= pass.fly.origem %></td>
     <td><%= pass.fly.destino %></td>
     <td><%= pass.client.nome %></td>
-    <td><%= link_to 'Show', pass %></td>
-    <td><%= link_to 'Edit', edit_pass_path(pass) %></td>
-    <td><%= link_to 'Destroy', pass, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+    <td><%= link_to '[Mostrar Detalhes]', pass %></td>
+    <td><%= link_to '[Editar]', edit_pass_path(pass) %></td>
+    <td><%= link_to '[Apagar]', pass, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Pass', new_pass_path %>
+<%= link_to '[Nova Passagem]', new_pass_path %>
+<a href="index">[Página Inicial]</a>

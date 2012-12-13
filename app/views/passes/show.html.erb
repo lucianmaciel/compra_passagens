@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Cliente:</b>
+  <%= @pass.client.nome %>
+</p>
+
+<p>
   <b>Assento:</b>
   <%= @pass.assento %>
 </p>
@@ -10,6 +15,10 @@
   <%= @pass.valor %>
 </p>
 
+<p>
+  <b>Horário do Vôo</b>
+  <%= @pass.fly.hora_voo %>
+</p>
 
-<%= link_to 'Edit', edit_pass_path(@pass) %> |
-<%= link_to 'Back', passes_path %>
+<%= link_to '[Editar]', edit_pass_path(@pass) %> |
+<%= link_to '[Voltar]', passes_path %>

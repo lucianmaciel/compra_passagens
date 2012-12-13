@@ -1,4 +1,5 @@
 class FliesController < ApplicationController
+  before_filter :autenticacao, :except => [:index, :show]
   # GET /flies
   # GET /flies.json
   def index
