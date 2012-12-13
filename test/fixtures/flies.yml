@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codigo: 1
+  data: 2012-12-12
+  hora_voo: 2012-12-12 23:30:13
+  hora_chegada: 2012-12-12 23:30:13
+  origem: MyString
+  destino: MyString
+  pilot_id: 1
+  airport_id: 1
+
+two:
+  codigo: 1
+  data: 2012-12-12
+  hora_voo: 2012-12-12 23:30:13
+  hora_chegada: 2012-12-12 23:30:13
+  origem: MyString
+  destino: MyString
+  pilot_id: 1
+  airport_id: 1

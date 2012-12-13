@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @fly.codigo %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @fly.data %>
+</p>
+
+<p>
+  <b>Hora voo:</b>
+  <%= @fly.hora_voo %>
+</p>
+
+<p>
+  <b>Hora chegada:</b>
+  <%= @fly.hora_chegada %>
+</p>
+
+<p>
+  <b>Origem:</b>
+  <%= @fly.origem %>
+</p>
+
+<p>
+  <b>Destino:</b>
+  <%= @fly.destino %>
+</p>
+
+
+<%= link_to 'Passes', fly_passes_path(@fly) %> |
+<%= link_to 'Edit', edit_fly_path(@fly) %> |
+<%= link_to 'Back', flies_path %>

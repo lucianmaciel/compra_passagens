@@ -1,0 +1,31 @@
+<h1>Listing passes</h1>
+
+<table>
+  <tr>
+    <th>Assento</th>
+    <th>Valor</th>
+    <th>Origem</th>
+    <th>Destino</th>
+    <th>Client</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @passes.each do |pass| %>
+  <tr>
+    <td><%= pass.assento %></td>
+    <td><%= pass.valor %></td>
+    <td><%= pass.fly.origem %></td>
+    <td><%= pass.fly.destino %></td>
+    <td><%= pass.client.nome %></td>
+    <td><%= link_to 'Show', pass %></td>
+    <td><%= link_to 'Edit', edit_pass_path(pass) %></td>
+    <td><%= link_to 'Destroy', pass, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pass', new_pass_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @pilot.nome %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @pilot.endereco %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @pilot.telefone %>
+</p>
+
+<%= link_to 'Flies', pilot_flies_path(@pilot) %> |
+<%= link_to 'Edit', edit_pilot_path(@pilot) %> |
+<%= link_to 'Back', pilots_path %>

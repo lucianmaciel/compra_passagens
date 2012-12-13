@@ -1,0 +1,37 @@
+<h1>Listing flies</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Data</th>
+    <th>Hora voo</th>
+    <th>Hora chegada</th>
+    <th>Origem</th>
+    <th>Destino</th>
+    <th>Pilot</th>
+    <th>Airplane</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @flies.each do |fly| %>
+  <tr>
+    <td><%= fly.codigo %></td>
+    <td><%= fly.data %></td>
+    <td><%= fly.hora_voo %></td>
+    <td><%= fly.hora_chegada %></td>
+    <td><%= fly.origem %></td>
+    <td><%= fly.destino %></td>
+    <td><%= fly.pilot.nome %></td>
+    <td><%= fly.airplane.modelo %></td>
+    <td><%= link_to 'Show', fly %></td>
+    <td><%= link_to 'Edit', edit_fly_path(fly) %></td>
+    <td><%= link_to 'Destroy', fly, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fly', new_fly_path %>

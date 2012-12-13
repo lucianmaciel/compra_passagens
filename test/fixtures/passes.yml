@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  assento: MyString
+  valor: 1.5
+  fly_id: 1
+  client_id: 1
+
+two:
+  assento: MyString
+  valor: 1.5
+  fly_id: 1
+  client_id: 1

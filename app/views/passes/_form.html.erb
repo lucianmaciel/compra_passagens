@@ -1,0 +1,34 @@
+<%= form_for(@pass) do |f| %>
+  <% if @pass.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pass.errors.count, "error") %> prohibited this pass from being saved:</h2>
+
+      <ul>
+      <% @pass.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <div class="field">
+    <%= f.label :fly %><br />
+    <%= f.collection_select(:fly_id, Fly.all, :id, :codigo) %>
+  </div>
+  <div class="field">
+    <%= f.label :client %><br />
+    <%= f.collection_select(:client_id, Client.all, :id, :nome) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :assento %><br />
+    <%= f.text_field :assento %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
